@@ -10,12 +10,12 @@ async function main() {
             imageUrl: "imageURL",
             technologies: {
                 create: [
-                    {name: "React JS"},
-                    {name: "Next JS"},
-                    {name: "Prisma ORM"},
-                    {name: "Typscript"},
-                    {name: "Javascript"},
-                    {name: "MySql"},
+                    { name: "React JS" },
+                    { name: "Next JS" },
+                    { name: "Prisma ORM" },
+                    { name: "Typscript" },
+                    { name: "Javascript" },
+                    { name: "MySql" },
                 ]
             }            
         }
