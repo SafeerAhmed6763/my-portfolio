@@ -2,7 +2,6 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-
 async function main() {
     const addData = await prisma.project.create({
         data: {
@@ -18,8 +17,7 @@ async function main() {
                     {name: "Javascript"},
                     {name: "MySql"},
                 ]
-            }
-            
+            }            
         }
     })
     console.log('Created New Project Data: ', addData);
@@ -29,7 +27,6 @@ async function main() {
     })
     console.log('All Projects: ')
     console.dir(allProjects, { depth: null })
-
 }
 main()
   .then(async () => {
