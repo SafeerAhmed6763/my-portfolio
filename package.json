@@ -2,19 +2,27 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:init": "prisma db push && prisma db seed",
+    "run-local-db": "docker compose -f ./config/docker-local.yml up",
+    "stop-local-db": "docker-compose -f ./config/docker-loca.yml down"
   },
   "dependencies": {
+    "@prisma/client": "4.2.1",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5"
+    "eslint-config-next": "12.2.5",
+    "prisma": "4.2.1"
   }
 }
