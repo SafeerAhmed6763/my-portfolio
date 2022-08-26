@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/globals.css'
 import Head from "next/head"
+import Layout from '../components/layout'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +9,9 @@ export default function MyApp({ Component, pageProps }) {
       <Head>
         <meta name='theme-color' content='red' />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+          <Component {...pageProps} />
+      </Layout>
     </React.Fragment>
   )
 }

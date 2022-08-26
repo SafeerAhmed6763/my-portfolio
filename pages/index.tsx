@@ -6,15 +6,18 @@ import Header from '../components/header/index.tsx'
 import Main from '../components/main/index.tsx'
 import Footer from '../components/footer/index'
 import { Container } from '../node_modules/@mui/material/index'
+import Layout from '../components/layout'
 
 export default function Home() {
   return (
     <Container maxWidth="lg" disableGutters={true}
     style={{ minHeight: "100vh" }} 
     >
-       <Header></Header>
-       <Main></Main>
-       <Footer></Footer>
+       {/* <Layout>
+          <Main />
+       </Layout>
+        */}
+      
     </Container>
   )
 }
