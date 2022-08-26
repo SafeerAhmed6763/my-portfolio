@@ -1,25 +1,29 @@
 import React from 'react'
+import Link from 'next/link'
+import {  Box } from '../../node_modules/@mui/material/index'
+
 import { navLinks } from '../../data.ts'
-import Link from "next/link"
+
+
 
 export default function Header(): JSX.Element {
   return (
-    <header>
-        <div>
-            Safeer Ahmed
-        </div>
-        <nav>
+    <header>  
+        <Box
+        sx={{
+            '& > :not(style) + :not(style)': {
+              ml: 2,
+            },
+          }}
+        >
             { navLinks.map((link, index) => {
                 return (
-                <ul>
-                    <Link href={link.path}>
-                        <li key={index}> {link.name}</li>
+                    <Link href={link.path} key={index}>
+                        {link.name}
                     </Link>
-                </ul>
-                )
-                
+                )      
             })}
-        </nav>
+        </Box>
     </header>
   )
 }

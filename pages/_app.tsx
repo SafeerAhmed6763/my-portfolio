@@ -1,6 +1,14 @@
 import React from 'react'
 import '../styles/globals.css'
+import Head from "next/head"
 
 export default function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <React.Fragment>
+      <Head>
+        <meta name='theme-color' content='red' />
+      </Head>
+      <Component {...pageProps} />
+    </React.Fragment>
+  )
 }

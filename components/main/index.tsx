@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function Main(): JSX.Element {
+
+export default function Main({ children }): JSX.Element {
   return (
-    <div>Main</div>
+    <div>
+        { children }
+    </div>
   )
 }
